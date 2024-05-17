@@ -36,3 +36,12 @@ article.square.active {
     background-color: blue;
     color: white;
 }
+
+.square>span.number {
+    display: none;
+}
+
+.square.active>span.number {
+    display: inline-block;
+    font-size: 40px;
+}

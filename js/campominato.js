@@ -17,4 +17,9 @@ for (let index = 0; index < 100; index++) {
         squareArticle.classList.add('active');
     });
 
+    playbtn.addEventListener('click', function () {
+        playbtn + squareArticle.classList.remove('active')
+    });
+
+
 }
