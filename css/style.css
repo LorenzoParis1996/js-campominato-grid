@@ -31,3 +31,8 @@ article.square {
     align-items: center;
     justify-content: center;
 }
+
+article.square.active {
+    background-color: blue;
+    color: white;
+}

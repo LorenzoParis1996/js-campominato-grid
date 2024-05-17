@@ -13,4 +13,8 @@ for (let index = 0; index < 100; index++) {
 
     squareArticle.appendChild(numberSquare);
 
+    squareArticle.addEventListener('click', function () {
+        squareArticle.classList.add('active');
+    });
+
 }
