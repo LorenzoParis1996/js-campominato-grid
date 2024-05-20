@@ -1,25 +1,31 @@
 const gridSection = document.querySelector('section#grid');
-const newLevel = document.querySelector('button#playbtn')
+const playButton = document.getElementById('playbtn');
 
-for (let index = 0; index < 100; index++) {
-    const squareArticle = document.createElement('article');
-    squareArticle.classList.add('square');
+playButton.addEventListener('click', function () {
+    createNewGrid(100, gridSection);
+});
 
-    gridSection.appendChild(squareArticle);
+function createNewGrid(squareQuantity, containerNumber) {
+    containerNumber.innerHTML = '';
+    for (let index = 0; index < squareQuantity; index++) {
+        const squareArticle = document.createElement('article');
+        squareArticle.classList.add('square');
 
-    const numberSquare = document.createElement('span');
-    numberSquare.classList.add('number');
-    numberSquare.append(index + 1);
+        gridSection.appendChild(squareArticle);
 
-    squareArticle.appendChild(numberSquare);
 
-    squareArticle.addEventListener('click', function () {
-        squareArticle.classList.add('active');
-    });
+        const numberSquare = document.createElement('span');
+        numberSquare.classList.add('number');
+        numberSquare.append(index + 1);
 
-    playbtn.addEventListener('click', function () {
-        playbtn + squareArticle.classList.remove('active')
-    });
+        squareArticle.appendChild(numberSquare);
 
+
+
+        squareArticle.addEventListener('click', function () {
+            squareArticle.classList.add('active');
+        });
+
+    };
 
 }
